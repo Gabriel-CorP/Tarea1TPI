@@ -1,0 +1,7 @@
+#Archivos a ignorar
+env
+proyectoApp/__pycache__
+proyectoApp/migrations/__pycache__
+proyecto/__pycache__
+build
+*/__pycache__/*

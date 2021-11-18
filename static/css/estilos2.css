@@ -1,0 +1,29 @@
+/*Hoja de estilos*/
+.body{
+    /*background-color: #1f1f1f;*/
+}
+#tituloconsola,#ejemsalida, #ejementrada {
+	text-align: center;
+}
+#introduccionconsola,#txtsalidas,#txtentradas{
+	text-align: justify;
+}
+
+.btnSubir {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    width: 40px;
+    transition: all 1s;
+}
+
+.navbar{
+   background-color: #000000;
+}
+
+.navbar-brand:hover{
+    background-color: #0da502;
+    border-radius: 8px;
+    transition: background-color 1.5s;
+}
+
