@@ -20,4 +20,5 @@ from proyectoApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index,name='index'),
+    path('consola/', views.pcli,name='consola'),
 ]

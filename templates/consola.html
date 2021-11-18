@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Proyecto TPI115 Grupo 09 Visual Basic .NET</title>
-	<meta charset="UTF-8">
-	<link href="css/estilos.css" rel="stylesheet" />
-	<script src="js/scripts.js"></script>
-</head>
-<body class="body">
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
 	<h1 id="tituloconsola"><b>Programacion en consola</b></h1>
 	<p id="introduccionconsola">La programación en consola es de las más básicas y de las primeras a nivel de aprendizaje por la que se debería empezar para aprender en lenguajes de programación populares como Java, Python, C#, entre otros, el lenguaje de programación de Visual Basic .NET tampoco es la excepción, si bien su sintaxis es parecida a C#, podemos decir que en realidad es una mezcla entre la programación en C# con el IDE de Visual Studio y la programación de macros en Excel con Visual Basic.
 	<br>	
@@ -23,5 +19,8 @@
 	<p id="ejementrada"><b>Ejemplo de entradas en Visual Basic .NET</b></p>
 	<div data-pym-src="https://www.jdoodle.com/embed/v0/41zT"></div>
 	<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
-</body>
-</html>
+
+{% load sweetify %}
+{% sweetify %}
+
+{% endblock %}
