@@ -7,3 +7,12 @@ def index(request):
 
 def pcli(request):
 	return render(request,"consola.html")
+
+def arrays(request):
+	return render(request,"arrays.html")
+
+def arraylist(request):
+	return render(request,"arraylist.html")
+
+def sortedlist(request):
+	return render(request,"sortedlist.html")
