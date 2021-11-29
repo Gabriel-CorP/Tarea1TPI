@@ -21,4 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index,name='index'),
     path('consola/', views.pcli,name='consola'),
+    path('arrays/', views.arrays,name='arrays'),
+    path('arraylist/', views.arraylist,name='arraylist'),
+    path('sortedlist/', views.sortedlist,name='sortedlist'),
 ]

@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<h2>Arrays en VB.NET</h2>
+<div class="texto"><p>Un array almacena una colección secuencial de tamaño fijo de elementos del mismo tipo. Los array se usan para almacenar una colección de datos, pero a menudo es más útil pensar en un array como una colección de variables del mismo tipo.
+Todos los array constan de ubicaciones de memoria contiguas. La dirección más baja corresponde al primer elemento y la dirección más alta al último elemento.</p>
+</div>
+<div>
+<img src="../static/img/arrays.jpg">
+</div>
+<h3>Creando arrays en VB.Net</h3>
+<div class="texto"><p>Para declarar una matriz en VB.Net, usa la instrucción Dim. Por ejemplo:</p> 
+</div>
+<div class="codigo">
+<p>
+Dim intData(30)	  'Un array de 31 elementos <br>
+Dim strData(20) As String	'Array de 21 strings<br>
+Dim twoDarray(10, 20) As Integer	'Array bidimensional de integers<br>
+Dim ranges(10, 100)	 'Array bidimensional
+</p>
+</div>
+<div class="texto"><p>También puede inicializar los elementos del array mientras declara. Por ejemplo:</p> 
+<div>
+<div class="codigo">
+<p>
+Dim intData() As Integer = {12, 16, 20, 24, 28, 32} <br>
+Dim names() As String = {"Karthik", "Sandhya", "Shivangi", "Ashwitha", "Somnath"}<br>
+Dim miscData() As Object = {"Hello World", 12d, 16ui, "A"}
+</p>
+</div>
+
+<div class="texto">
+<p>Los elementos de un array se pueden almacenar y acceder a ellos mediante su índice. <a href="http://jdoodle.com/a/42X0" target="_blank">El siguiente programa</a> demuestra esto</p>
+</div>
+<div class="compilador">
+<div data-pym-src="https://www.jdoodle.com/embed/v0/42X0"></div>
+</div>
+
+
+<h3>Arrays dinámicos</h3>
+<div class="texto"><p>Las Arrays dinámicos son Arrays que se pueden dimensionar y redimensionar según las necesidades del programa. Puede declarar un Array dinámico utilizando la sentencia <b>ReDim</b> <br>Sintaxis para la sentencia ReDim: </p> 
+</div>
+<div class="codigo">
+<p>
+ReDim [Preserve] NombredelArray(NumeroDeElemetos)
+</p>
+</div>
+<div class="texto"><p>
+La palabra clave<b> Preserve</b>ayuda a preservar los datos en una matriz existente cuando se cambia su tamaño. <br>
+
+<b> NombredelArray: </b>el nombre del array a redimensionar.
+
+<b>NumeroDeElemetos: </b>especifica la nueva dimensión</p> 
+</div>
+<div class="compilador">
+<div data-pym-src="https://www.jdoodle.com/embed/v0/47lL"></div>
+</div>
+<h3>Arrays multidimensionales</h3>
+<div class="texto"><p>VB.Net permite arrays multidimensionales. Los arrays multidimensionales también se denominan matrices rectangulares.
+<br>Puede declarar una matriz bidimensional de Strings Así: 
+</p> 
+</div>
+<div class="codigo">
+<p>
+Dim ArrayBidimensional(10, 20) As String
+</p>
+</div>
+<div class="texto"><p>
+El siguiente programa demuestra la creacion y uso de un array bidimensional
+</p>
+</div>
+<div class="compilador">
+<div data-pym-src="https://www.jdoodle.com/embed/v0/47lQ"></div>
+</div>
+
+
+
+
+<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js"  type="text/javascript">
+</script>
+{% load sweetify %}
+{% sweetify %}
+
+{% endblock %}
+
