@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<h1 class="animate__animated animate__backInRight" align="center" id="titulo">Estructuras de datos en VB .NET</h1>
+<div id="texto" class="animate__animated animate__backInRight" align="left">
+    <p>Las estructuras de datos en programación son formas que ayudan a almacenar, organizar y utilizar eficientemente los datos.
+    Visual Basic .NET cuenta con un conjunto predefinido de estructuras de datos o <b>Colecciones</b>, las cuales cuentan con propiedades y métodos comunes al manejo de dichas estructuras y los objetos que contienen.
+    <br><br>Para utilizar estas colecciones, es necesario digitar "<tt>Imports System.Collections</tt>" al inicio del archivo de código fuente.
+    Algunas de las colecciones incluidas en el espacio de nombres son:
+    </p>
+    <dl class="listadet">
+        <dt><a href="/estructura_datos/arraylist">ArrayList</a>:</dt>
+        <dd>&rarr; Colección ordenada de objetos que pueden indexarse individualmente.</dd>
+        <dt><a href="/estructura_datos/queue">Cola (Queue)</a>:</dt>
+        <dd>&rarr; Colección de objetos donde el primer objeto que entra es el primer objeto que sale.</dd>
+        <dt><a href="/estructura_datos/stack">Pila (Stack)</a>:</dt>
+        <dd>&rarr; Colección de objetos donde el primer objeto que entra es el último objeto que sale.</dd>
+        <dt><a href="/estructura_datos/sortedlist">SortedList</a>:</dt>
+        <dd>&rarr; Colección de pares clave-valor donde se accede a los objetos mediante una clave o índice.</dd>
+    </dl>
+    <br>
+    <p align="center">Cada página contiene un ejemplo de uso de dicha colección.</p>
+</div>
+{% endblock %}

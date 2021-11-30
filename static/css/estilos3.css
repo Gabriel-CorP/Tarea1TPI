@@ -5,7 +5,7 @@
 #tituloconsola,#ejemsalida, #ejementrada, #ejemestructuras, #videos {
 	text-align: center;
 }
-#introduccionconsola,#txtsalidas,#txtentradas{
+#introduccionconsola,#txtsalidas,#txtentradas,#texto{
 	text-align: justify;
 }
 
@@ -27,3 +27,23 @@
     transition: background-color 1.5s;
 }
 
+.midtabla {
+    border-bottom: 1px solid;
+    border-top: 1px solid
+}
+
+.toptabla {
+    border-bottom: 1px solid;
+}
+
+.listadet {
+    padding: 3%;
+}
+
+#tituloconsola,#titulo {
+    padding-bottom: 1%;
+}
+
+#contenido {
+    padding: 2%
+}

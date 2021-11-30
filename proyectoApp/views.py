@@ -11,8 +11,17 @@ def pcli(request):
 def arrays(request):
 	return render(request,"arrays.html")
 
+def estructuraDatos(request):
+    return render(request,"estructuras-de-datos.html")
+
 def arraylist(request):
 	return render(request,"arraylist.html")
+
+def queue(request):
+	return render(request,"queue.html")
+
+def stack(request):
+	return render(request,"stack.html")
 
 def sortedlist(request):
 	return render(request,"sortedlist.html")
