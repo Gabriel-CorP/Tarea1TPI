@@ -47,3 +47,9 @@
 #contenido {
     padding: 2%
 }
+.codigo{
+    background-color: rgb(150, 208, 235);
+    border-radius: 12px;
+    font-weight: bold;
+    
+}
