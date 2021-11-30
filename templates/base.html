@@ -11,10 +11,13 @@
         <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
         <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'js/sweetalert2@11.js' %}"></script>
+        <!-- <script src="{% static 'js/sweetalert2@11.js' %}"></script> -->
         <script src="{% static 'js/menuscroll-tooltip2.js' %}"></script>
+        <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="5fHI9gtQ"></script>
         <a href="#" id="inicio" style="visibility: hidden;"></a>
         <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top wow animate__animated animate__slideInDown" role="navigation">
             <div class="container-fluid">
