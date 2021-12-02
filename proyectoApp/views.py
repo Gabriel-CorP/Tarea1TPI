@@ -1,4 +1,8 @@
+from django.http.response import JsonResponse
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
 import sweetify
 
 # Create your views here.
@@ -25,3 +29,18 @@ def stack(request):
 
 def sortedlist(request):
 	return render(request,"sortedlist.html")
+
+def enviarCorreo(request):
+	subject=request.GET.get("asunto")
+	messa=request.GET.get("mensaje")
+	correousuario=request.GET.get("email")
+	print(subject)
+	print(messa)
+	print(correousuario)
+	message=messa+" att: " + correousuario
+	email_from=settings.EMAIL_HOST_USER
+	recipient_list=["gabrielcorena@gmail.com"]
+
+	contexto={'nose':"nada"}
+	send_mail(subject,message,email_from,recipient_list)
+	return (JsonResponse(contexto))

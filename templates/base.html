@@ -45,6 +45,47 @@
                         
         {% endblock %}
         </div>
+
+        <div class="correo">
+
+            <center>
+                <h3> Dudas o comentarios</h3>
+                <p>Le responderemos lo mas pronto posible</p>
+            <table>
+                <tr> <td><p>Correo:</p></td> <td><input type="text" id="email"></input> </td> <td><p> Asunto: </input> </p></td> <td><input type="text" id="asunto"></td> </tr>
+            
+            <tr> <td> <p>Mensaje: </p> </td> <td colspan="3"><textarea id="mensaje" rows="2" cols="55"></textarea> </td> </tr>
+            
+            <table>
+            <input type="button"  class="btn btn-primary" value="enviar" onClick="enviar()" ></input>
+            </center>
+        </div>
+        <script>
+            function enviar() {
+                var corr = document.getElementById("email");
+                var asu = document.getElementById("asunto");
+                var men = document.getElementById("mensaje");
+                console.log(asu.value+" " +corr.value+" "+ men.value)
+                if ( asu.value!==""  && corr.value!=="" && men.value!==""){
+                $.ajax({
+                  url:"{% url 'correo' %}",
+                  type:"GET",
+                  data:{'asunto':asu.value,'mensaje':men.value,'email':corr.value},
+                  success: function(res){
+                    corr.value="";
+                    asu.value="";
+                    men.value="";
+                    alert("Correo electronico enviado");
+                    
+                  }
+                });
+              }
+              else {
+                alert("Debe completar todos los campos del formulario de envio de correo");
+            }
+            }
+        
+        </script>
         <a href="#inicio"><img src="{% static 'img/subir.png' %}" alt="Subir" class="btnSubir" id="btnSubir"></a>
     </body>
 </html>

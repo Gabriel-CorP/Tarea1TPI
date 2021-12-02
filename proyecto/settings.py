@@ -129,5 +129,13 @@ CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
 STATIC_URL = '/static/'
 
+#envio de email
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="programacionvb.net@gmail.com"
+EMAIL_HOST_PASSWORD="2pupusas"
+
 # possible options: 'sweetalert', 'sweetalert2' - default is 'sweetalert2'
 SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'

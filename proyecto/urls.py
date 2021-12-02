@@ -22,6 +22,7 @@ urlpatterns = [
     path('index/', views.index,name='index'),
     path('consola/', views.pcli,name='consola'),
     path('arrays/', views.arrays,name='arrays'),
+    path('correo/', views.enviarCorreo,name='correo'),
     path('estructura_datos/', views.estructuraDatos,name='estructura_datos'),
     path('estructura_datos/arraylist/', views.arraylist,name='arraylist'),
     path('estructura_datos/queue/', views.queue,name='queue'),
