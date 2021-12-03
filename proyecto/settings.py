@@ -25,7 +25,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = '*b=sq+f!k&&unndqr-z7u6d15hmra9f938ddax$$o&g5gz5p+m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'proyecto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'd34tnvpe6tt88g',
-#         'USER': 'rrroidrrbsxvnt',
-#         'PASSWORD': '80d3468b43f8954a58ec3687def3ef70de0f74a5fcd8f3203fb94f7fb838aaa9',
-#         'HOST': 'ec2-54-225-203-79.compute-1.amazonaws.com',
-#         'DATABASE_PORT': '5432',
-#     }
-# }
-
-import dj_database_url
-from decouple import config
-
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd34tnvpe6tt88g',
+        'USER': 'rrroidrrbsxvnt',
+        'PASSWORD': '80d3468b43f8954a58ec3687def3ef70de0f74a5fcd8f3203fb94f7fb838aaa9',
+        'HOST': 'ec2-54-225-203-79.compute-1.amazonaws.com',
+        'DATABASE_PORT': '5432',
+    }
 }
+
+# import dj_database_url
+# from decouple import config
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=config('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
