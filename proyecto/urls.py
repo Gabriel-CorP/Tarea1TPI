@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from proyectoApp import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +34,4 @@ urlpatterns = [
     path('programacion_web/base_de_datos/', views.baseDeDatos, name='base_de_datos'),
     path('programacion_web/vistas/', views.vistas, name='vistas'),
     path('programacion_web/asp/', views.aspsql, name='asp'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
