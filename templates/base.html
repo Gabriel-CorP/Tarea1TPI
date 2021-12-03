@@ -11,9 +11,8 @@
         <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
         <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <!-- <script src="{% static 'js/sweetalert2@11.js' %}"></script> -->
+        <script src="{% static 'js/sweetalert.min.js' %}"></script>
         <script src="{% static 'js/menuscroll-tooltip2.js' %}"></script>
-        <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
     </head>
     <body>
         <div id="fb-root"></div>
@@ -52,12 +51,13 @@
                 <h3> Dudas o comentarios</h3>
                 <p>Le responderemos lo mas pronto posible</p>
             <table>
-                <tr> <td><p>Correo:</p></td> <td><input type="text" id="email"></input> </td> <td><p> Asunto: </input> </p></td> <td><input type="text" id="asunto"></td> </tr>
+                <tr> <td><p>Correo:</p></td> <td><input type="text" id="email" required></input> </td> <td><p> Asunto: </input> </p></td> <td><input type="text" id="asunto" required></td> </tr>
             
-            <tr> <td> <p>Mensaje: </p> </td> <td colspan="3"><textarea id="mensaje" rows="2" cols="55"></textarea> </td> </tr>
+            <tr> <td> <p>Mensaje: </p> </td> <td colspan="3"><textarea id="mensaje" rows="2" cols="55" required></textarea> </td> </tr>
             
             <table>
-            <input type="button"  class="btn btn-primary" value="enviar" onClick="enviar()" ></input>
+            <button class="btn btn-primary" onClick="enviar()"><i class="fas fa-envelope"></i> Enviar</button>
+            <!-- <input type="button"  class="btn btn-primary" value="Enviar" onClick="enviar()" ></input> -->
             </center>
         </div>
         <script>
@@ -75,13 +75,15 @@
                     corr.value="";
                     asu.value="";
                     men.value="";
-                    alert("Correo electronico enviado");
+                    // alert("Correo electronico enviado");
+                    swal("Hecho!", "Correo mandado con exito", "success");
                     
                   }
                 });
               }
               else {
-                alert("Debe completar todos los campos del formulario de envio de correo");
+                //alert("Debe completar todos los campos del formulario de envio de correo");
+                swal("Fallo!", "Ocurrio un error, debe llenar todos los campos requeridos para enviar el correo", "error");
             }
             }
         
