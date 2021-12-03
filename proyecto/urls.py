@@ -28,4 +28,8 @@ urlpatterns = [
     path('estructura_datos/queue/', views.queue,name='queue'),
     path('estructura_datos/stack/', views.stack,name='stack'),
     path('estructura_datos/sortedlist/', views.sortedlist,name='sortedlist'),
+    path('programacion_web/', views.programacionWeb, name='programacion_web'),
+    path('programacion_web/base_de_datos/', views.baseDeDatos, name='base_de_datos'),
+    path('programacion_web/vistas/', views.vistas, name='vistas'),
+    path('programacion_web/asp/', views.aspsql, name='asp'),
 ]

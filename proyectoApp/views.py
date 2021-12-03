@@ -30,6 +30,18 @@ def stack(request):
 def sortedlist(request):
 	return render(request,"sortedlist.html")
 
+def programacionWeb(request):
+	return render(request, "programacion-web.html")
+
+def baseDeDatos(request):
+	return render(request, "base-de-datos.html")
+
+def vistas(request):
+	return render(request, "vistas.html")
+
+def aspsql(request):
+	return render(request, "asp_sqlconection.html")
+
 def enviarCorreo(request):
 	subject=request.GET.get("asunto")
 	messa=request.GET.get("mensaje")
