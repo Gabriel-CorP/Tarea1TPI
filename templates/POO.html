@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+	<h1 class="animate__animated animate__heartBeat" id="titulopoo"><b>Programacion orientada a objetos</b></h1>
+<div class="animate__animated animate__backInRight"  align="center">
+		<img src="../static/img/vb.jpg">
+	</div>
+	<p class="animate__animated animate__backInRight" id="introduccionpoo">La POO es una evolucion de la programacion por procedimientos llamada tambien estructurada. Se basaba en funciones y procedimientos y el codigo que controlaba el flujo de las llamadas a estos
+	<br><br>
+	La Programacion Orientada a Objetos (también conocida como POO u OPP en sus siglas ingles) es un paradigma de programacion que ofrece una nueva manera de obtener resultados.
+        <br><br>
+        Un paradigma de programacion es el enfoque que se debe tener a la hora de diseñar una solucion para un problema. En el caso de la programacion orientada a objetos la solución se desarrolla en torno a objetos los cuales ofrecen funcionalidades especiales y permiten manipular los datos de entrada para la obtención de datos de salida
+        </p>
+        <p class="animate__animated animate__backInRight" id="pilares"><b>Los tres pilares de la Programacion Orientada a Objetos</b></p>
+        Todos los lenguajes basados en objetos, deben cumplir estos tres requisitos:
+        <ol>
+            <li>Herencia</li>
+            <li>Encapsulacion</li>
+            <li>Polimorfismo</li>
+        </ol>
+       <b>**Nota: Algunos autores añaden un cuarto requisito: la abstraccion, pero este último está estrechamente ligado con la encapsulacion.**</b>
+	  <h1 class="animate__animated animate__heartBeat" id="clases"><b>Clases</b></h1>
+<div class="animate__animated animate__backInRight"  align="center">
+		<img src="../static/img/clase.png">
+	</div>
+	<p class="animate__animated animate__backInRight" id="clasesinfo"> Una Clase es una estructura de un objeto, un diseño que describe las propiedades (datos) y métodos (acciones) de un objeto
+            <br><br>Una clase es la que tiene el poder de ejecucion en los lenguajes de .NET, la mayoría del codigo que escribiremos en nuestros programas sera escrito en una clase y la mayoría de la funcionalidad del .NET Framework será utilizada a partir de una clase. De ahi que el concepto de clase es un concepto fundamental para el desarrollo de aplicaciones con .NET.
+    <br><br>Una clase también puede contener subclases Una subclase hereda las mismas propiedades y comportamientos que su clase principal, pero puede tener sus propias propiedades y clases únicas.
+	<br><br>Una clase agrupa diferentes funciones, métodos, variables y propiedades, que se denominan miembros. Una clase encapsula los miembros, a los que puede acceder una instancia de la clase, llamada objeto. Las clases son de gran utilidad para el programador, ya que hacen que la tarea sea cómoda y rápida, con características como modularidad, reutilización, mantenibilidad y legibilidad del código.
+<br>Las clases son los componentes básicos de los lenguajes de programación orientados a objetos.
+<p class="animate__animated animate__backInRight" id="ejem1clase"><b>Ejemplo de clase en Visual Basic .NET</b></p>
+	<div class="animate__animated animate__backInRight" data-pym-src="https://www.jdoodle.com/iembed/v0/kCm"></div>
+            <h2 class="animate__animated animate__heartBeat" id="instancia"><b>Instancia de una clase</b></h2>
+	<p class="animate__animated animate__backInRight" id="instanciainfo"> La instancia de una clase se realiza con la utilizacion de la instruccion new (New en VB.Net), esta instancia podrá realizarse de varias maneras dependiendo del lenguaje y de las necesidades del programa. Pero en todos los casos será para construir un objeto el cual estará en la mayoría de los casos alojados en una variable declarada con anterioridad y algunos otros podrá ser de manera anónima. Al referirme a la manera anónima quiero decir que se utiliza la clase sin necesidad de declarar una variable para acceder a la funcionalidad.
+        </p>
+       <p class="animate__animated animate__backInRight" id="ejem2clase"><b>Ejemplo de clase en Visual Basic .NET</b></p>
+	<div class="animate__animated animate__backInRight" data-pym-src="https://www.jdoodle.com/iembed/v0/kCi"></div>
+       <h2 class="animate__animated animate__heartBeat" id="herencia"><b>1. Herencia</b></h2>
+	<p class="animate__animated animate__backInRight" id="herenciainfo">Esta es la caracteristica más importante de la POO. Según la propia documentacion de Visual Studio .NET:
+"La herencia permite crear nuevas clases a partir de clases existentes. La herencia puede simplificar el diseño de la aplicacion proporcionando una estructura de relaciones entre las distintas clases.
+Tambien admite la reutilizacion de codigo porque solo se debe codificar el comportamiento de clases nuevas o distintas."
+<br><br>
+Una relación de herencia es una relacion en la que un tipo (el tipo derivado) se deriva de otro (el tipo base), de tal forma que el espacio de declaracion del tipo derivado contiene implícitamente todos los miembros de tipo no constructor del tipo base.
+<br><br>
+"La herencia es la capacidad de una clase de obtener la interfaz y comportamiento de una clase existente"
+        <br>Existen dos tipos de herencia:
+<ol>
+    <li><b>Herencia por especialización: </b>es la que se realiza cuando necesitamos crear una clase nueva que disponga de las mismas características que otra, pero que le añada funcionalidades</li>
+    <li><b>Herencia por generalización: </b>es la que realizamos cuando tenemos muchas clases que comparten unas mismas funcionalidades y por homogeneizar las partes comunes se decide crear una clase que implemente toda esa parte común y se dejan solo las partes especificas en cada clase.</li>
+</ol>
+En realidad la herencia es la misma, esta es una diferenciación puramente conceptual sobre la forma en que se a llegado a ella.
+<br>Una característica muy importante que permite la herencia es que podemos hacer que una clase implemente de manera diferente un método heredado. Haciendo que dos clases que heredan de la misma clase y heredan los mismos métodos se comporten de maneras diferentes
+
+<h2 class="animate__animated animate__heartBeat" id="encapsulacion"><b>2. Encapsulacion</b></h2>
+	<p class="animate__animated animate__backInRight" id="encapsulacioninfo">Segun Visual Studio.NET:
+            <br>"La encapsulacion es la capacidad de contener y controlar el acceso a un grupo de elementos asociados. Las clases proporcionan una de las formas más comunes de encapsular elementos."
+        <br><br>La encapsulación es un mecanismo que consiste en organizar datos y métodos de una estructura, conciliando el modo en que el objeto se implementa, es decir, evitando el acceso a datos por cualquier otro medio distinto a los especificados. Por lo tanto, la encapsulación garantiza la integridad de los datos que contiene un objeto
+            <br><br>Cuando usamos las clases, estas tienen una serie de caracteristicas (los datos que manipula) asi como una serie de comportamientos (las acciones a realizar con esos datos). La encapsulacion es esa capacidad de la clase de ocultarnos sus interioridades para que solo veamos lo que tenemos que ver, sin tener que preocuparnos de como está codificada para que haga lo que hace (simplemente nos debe importar que lo hace).
+        </p>
+        <h2 class="animate__animated animate__heartBeat" id="polimorfismo"><b>3. Polimorfismo</b></h2>
+        <p class="animate__animated animate__backInRight" id="polimorfismoinfo"> Según la documentacion de Visual Studio.NET:
+            <br>"El polimorfismo se refiere a la posibilidad de definir multiples clases con funcionalidad diferente, pero con métodos o propiedades denominados de forma idéntica, que pueden utilizarse de manera intercambiable mediante código cliente en tiempo de ejecución."
+            <br><br>Dicho de otra manera, puede tener multiples clases que se pueden utilizar de forma intercambiable, si bien cada clase implementa las mismas propiedades o los mismos métodos de maneras diferentes. El polimorfismo es importante en la programación orientada a objetos, puesto que permite usar elementos que tienen el mismo nombre, independientemente del tipo de objeto que se está utilizando en ese momento.
+            <br><br>En programación orientada a objetos el polimorfismo se refiere a la posibilidad de definir clases diferentes que tienen métodos o atributos denominados de forma idéntica, pero que se comportan de manera distinta. El concepto de polimorfismo se puede aplicar tanto a funciones como a tipos de datos. Así nacen los conceptos de funciones polimórficas y tipos polimórficos. Las primeras son aquellas funciones que pueden evaluarse o ser aplicadas a diferentes tipos de datos de forma indistinta; los tipos polimórficos, por su parte, son aquellos tipos de datos que contienen al menos un elemento cuyo tipo no está especificado.
+<h1 class="animate__animated animate__heartBeat" id="objetos"><b>Objetos</b></h1>
+      <p>Un objeto representa un elemento de una aplicacion, como, por ejemplo, una hoja de calculo, una celda, un grafico, un formulario o un informe. En el código de Visual Basic, debe identificar un objeto para aplicar uno de los métodos del objeto o cambiar el valor de una de las propiedades.
+      <br><br>un objeto es la unidad individual que en tiempo de ejecución realiza las tareas de un programa. Estos objetos interactúan unos con otros, en contraposición a la visión tradicional en la cual un programa es una colección de subrutinas (funciones o procedimientos), o simplemente una lista de instrucciones para el computador. Cada objeto es capaz de recibir mensajes, procesar datos y enviar mensajes a otros objetos de manera similar a un servicio.
+      <br><br>Cada objeto es responsable de inicializarse y destruirse en forma correcta
+      </p>
+<div class="animate__animated animate__backInRight"  align="center">
+		<img src="../static/img/inobjetos.png">
+	</div>
+<h2 class="animate__animated animate__heartBeat" id="instanciacionobj"><b>Instanciacion de objetos</b></h2>
+<br>Permiten asignar valores a cualquier campo o propiedad accesible de un objeto en el momento de su creación sin tener que invocar un constructor seguido de líneas de instrucciones de asignación
+        <p class="animate__animated animate__backInRight" id="insmetodosinfo"> </p>
+<div class="animate__animated animate__backInRight"  align="center">
+		<img src="../static/img/objetos.png">
+	</div>
+        
+            <h2 class="animate__animated animate__heartBeat" id="metodos"><b>Metodos</b></h2>
+        <p class="animate__animated animate__backInRight" id="metodosinfo"> Definen el comportamiento de los objetos de una clase. La implementacion se suele ocultar al exterior de la clase. Los métodos permiten manipular los datos definidos por la clase y, en muchos casos, brindan acceso a esos datos.
+            <br><br>Un método es una abstracción de una operación que puede hacer o realizarse con un objeto.
+            <br>Por ejemplo:
+            </p>
+            
+            <h2 class="animate__animated animate__heartBeat" id="constructor"><b>1. Constructor</b></h2>
+        <p class="animate__animated animate__backInRight" id="constructorinfo"> El constructor es un método especial de una clase creada con una palabra clave New y no tiene un tipo de retorno.
+            <br>El propósito principal del constructor es inicializar la memoria, asignada al objeto, donde se almacenarán sus campos.
+        <br>Hay varios tipos de constructores.
+<ol>
+    <li><b>Constructor predeterminado:</b> Si no proporciona un constructor para su clase, VB.NET crea uno de forma predeterminada que crea una instancia del objeto y establece las variables miembro en los valores predeterminados</li>
+    <li><b>Constructor parametrizado: </b>De manera similar a los métodos, si necesitamos datos adicionales para crear un objeto, el constructor los obtiene a través de una lista de parámetros</li>
+    <li><b>Copiar constructor: </b>El constructor que crea un objeto copiando variables de otro objeto se llama constructor de copia. El propósito de un constructor de copia es inicializar una nueva instancia con los valores de una instancia existente.</li>
+    <li><b>Constructor privado: </b>Un constructor privado se declara especificando el Private modificador de acceso. Se usa para evitar la creación de instancias de una clase cuando solo tenemos Sharedmiembros.</li>
+</ol>
+
+            <h2 class="animate__animated animate__heartBeat" id="getyset"><b>2. Get y Set</b></h2>
+        <p class="animate__animated animate__backInRight" id="getysetinfo"> Sirven para obtener o para modificar los atributos de una clase
+        <br><br>Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso get o un descriptor de acceso set. El bloque de código del descriptor de acceso get se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso set se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso set se considera de solo lectura. Una propiedad sin un descriptor de acceso get se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura</p>
+        
+        <h2 class="animate__animated animate__heartBeat" id="destructor"><b>3. Destructor</b></h2>
+        <p class="animate__animated animate__backInRight" id="destructorinfo"> No es tan tipico, no se suele usar (se hace de manera automatica).
+        <br><br>Información importante sobre destructores:
+            <ol>
+    <li>Los destructores se invocan automáticamente y no se pueden invocar explícitamente.</li>
+    <li>Los destructores no se pueden sobrecargar. Por tanto, una clase puede tener, como máximo, un destructor.</li>
+    <li>Los destructores no se heredan. Por lo tanto, una clase no tiene otros destructores que el que se puede declarar en ella.</li>
+    <li>Los destructores no se pueden usar con estructuras. Solo se usan con clases.</li>
+    <li>Una instancia se vuelve elegible para la destrucción cuando ya no es posible que ningún código use la instancia.</li>
+    <li>La ejecución del destructor de la instancia puede ocurrir en cualquier momento después de que la instancia sea elegible para su destrucción.</li>
+    <li>Cuando se destruye una instancia, los destructores en su cadena de herencia se llaman, en orden, de más derivado a menos derivado.</li></ol>
+        
+        <h2 id="videos"><b>Videos Recomendados:</b></h2>
+	<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vH32wXPTeKk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nlp37odNato?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-DS8_-JcvHs?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+    </center>
+        <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+{% load sweetify %}
+{% sweetify %}
+
+{% endblock %}
