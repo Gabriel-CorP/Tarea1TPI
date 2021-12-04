@@ -42,6 +42,9 @@ def vistas(request):
 def aspsql(request):
 	return render(request, "asp_sqlconection.html")
 
+def POO(request):
+	return render(request, "POO.html")
+
 def enviarCorreo(request):
 	subject=request.GET.get("asunto")
 	messa=request.GET.get("mensaje")
