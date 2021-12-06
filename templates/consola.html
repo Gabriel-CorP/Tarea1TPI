@@ -5,7 +5,7 @@
 <br>
 	<h1 class="animate__animated animate__heartBeat" id="tituloconsola"><b>Programacion en consola</b></h1>
 	<div class="animate__animated animate__backInRight"  align="center">
-		<img src="../static/img/pcli.png">
+		<img src="../static/img/pcli.png" class="img-fluid">
 	</div>
 	<br>
 	<p class="animate__animated animate__backInRight" id="introduccionconsola">La programación en consola es de las más básicas y de las primeras a nivel de aprendizaje por la que se debería empezar para aprender en lenguajes de programación populares como Java, Python, C#, entre otros, el lenguaje de programación de Visual Basic .NET tampoco es la excepción, si bien su sintaxis es parecida a C#, podemos decir que en realidad es una mezcla entre la programación en C# con el IDE de Visual Studio y la programación de macros en Excel con Visual Basic.
@@ -43,18 +43,40 @@
 	</p>
 	<h5 id="videos"><b>Videos Recomendados:</b></h5>
 	<center>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/T26P1jF6prg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/FUIpZXNEg6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="row">
+    		<div class="col-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/T26P1jF6prg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/FUIpZXNEg6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
 	</center>
 	<br>
 	<dt><a href="https://www.youtube.com/watch?v=jh8ucisxm5w&list=PL7tWmaH04EfIG-ZGq4D6GlO1Pl-iNbVay" target="_blank">Lista de reproduccion de curso de Visual Basic .NET</a></dt> 
-    <center>
-            <div class="fb-share-button" data-href="http://127.0.0.1:8000/consola/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fconsola%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-    </center>
-	<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 
+	<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 {% load sweetify %}
 {% sweetify %}
-
 {% endblock %}
+	
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/index/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
+{% endblock %}
+
+
+
+

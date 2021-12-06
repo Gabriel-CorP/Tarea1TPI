@@ -6,11 +6,21 @@
 <h1 class="text-center animate__animated animate__heartBeat">Titulo</h1>
 
 
-
-<center>
-    <div class="fb-share-button" data-href="http://127.0.0.1:8000/index/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-</center>
 {% load sweetify %}
 {% sweetify %}
 
+{% endblock %}
+
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/index/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
 {% endblock %}

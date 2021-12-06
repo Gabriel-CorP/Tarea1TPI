@@ -13,6 +13,9 @@
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
         <script src="{% static 'js/sweetalert.min.js' %}"></script>
         <script src="{% static 'js/menuscroll-tooltip2.js' %}"></script>
+        <script src="{% static 'js/queryloader2.min.js' %}"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     </head>
     <body>
         <div id="fb-root"></div>
@@ -44,7 +47,7 @@
                         
         {% endblock %}
         </div>
-
+<!-- 
         <div class="correo">
 
             <center>
@@ -57,9 +60,31 @@
             
             <table>
             <button class="btn btn-primary" onClick="enviar()"><i class="fas fa-envelope"></i> Enviar</button>
-            <!-- <input type="button"  class="btn btn-primary" value="Enviar" onClick="enviar()" ></input> -->
             </center>
+        </div> -->
+        <center>
+            <h3> Dudas o comentarios</h3>
+            <p>Le responderemos lo mas pronto posible</p>
+        </center>
+        <form>
+        <div class="row justify-content-center">
+          <div class="col-md-6">  
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              </div>
+             <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="email" class="form-control" id="asunto" placeholder="Asunto" required>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary" onClick="enviar()"><i class="fas fa-envelope"></i> Enviar</button>
+          </div>
         </div>
+        </form>
         <script>
             function enviar() {
                 var corr = document.getElementById("email");
@@ -86,8 +111,20 @@
                 swal("Fallo!", "Ocurrio un error, debe llenar todos los campos requeridos para enviar el correo", "error");
             }
             }
-        
+            window.addEventListener('DOMContentLoaded', function() {
+                QueryLoader2(document.querySelector("body"), {
+                    barColor: "#69d2f1",
+                    backgroundColor: "#333",
+                    percentage: true,
+                    barHeight: 4,
+                    minimumTime: 400,
+                    fadeOutTime: 1000
+                });
+            });
         </script>
+        {% block buttons %}
+                        
+        {% endblock %}
         <a href="#inicio"><img src="{% static 'img/subir.png' %}" alt="Subir" class="btnSubir" id="btnSubir"></a>
     </body>
 </html>
