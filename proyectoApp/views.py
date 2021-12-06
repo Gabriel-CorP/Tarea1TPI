@@ -38,6 +38,7 @@ def baseDeDatos(request):
 
 def vistas(request):
 	return render(request, "vistas.html")
+    
 
 def aspsql(request):
 	return render(request, "asp_sqlconection.html")
