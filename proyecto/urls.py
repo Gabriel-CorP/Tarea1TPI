@@ -34,4 +34,5 @@ urlpatterns = [
     path('programacion_web/base_de_datos/', views.baseDeDatos, name='base_de_datos'),
     path('programacion_web/vistas/', views.vistas, name='vistas'),
     path('programacion_web/asp/', views.aspsql, name='asp'),
+    path('poo/', views.poo,name='POO'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

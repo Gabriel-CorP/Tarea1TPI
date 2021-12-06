@@ -38,9 +38,13 @@ def baseDeDatos(request):
 
 def vistas(request):
 	return render(request, "vistas.html")
+    
 
 def aspsql(request):
 	return render(request, "asp_sqlconection.html")
+
+def poo(request):
+	return render(request, "POO.html")
 
 def enviarCorreo(request):
 	subject=request.GET.get("asunto")
