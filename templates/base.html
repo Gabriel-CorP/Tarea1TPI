@@ -18,10 +18,9 @@
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     </head>
     <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="5fHI9gtQ"></script>
-        <a href="#" id="inicio" style="visibility: hidden;"></a>
-        <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top wow animate__animated animate__slideInDown" role="navigation">
+        <div id="banner" align="center"> <img src="https://image.flaticon.com/icons/png/512/919/919844.png" class="img-fluid" width="60" height="60" style="display:inline;"> <h1>Bienvenidos a programación en VB.NET</h1> </div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="5fHI9gtQ"></script>       
+        <nav id="menu" class="navbar navbar-expand-lg navbar-dark  wow animate__animated animate__slideInDown" role="navigation">
             <div class="container-fluid">
                 <ul class="navbar-nav mr-auto">
                     <a class="navbar-brand" href="/index"><i class="fas fa-home"></i> Inicio</a>
@@ -42,6 +41,8 @@
                 </div>
             </div>
         </nav>
+        <div id="fb-root"></div>
+        <a href="#" id="inicio" style="visibility: hidden;"></a>
         <div id="contenido">
         {% block content %}
                         
@@ -85,6 +86,33 @@
           </div>
         </div>
         </form>
+        {% block buttons %}
+                        
+        {% endblock %}
+        <br>
+        <footer id="footer" class="midnight-blue">
+            <br>
+            <div class="container">
+            <div class="col-sm-9">
+                <div style="float:left; padding:0 30px 0 0" class="navbar-brand2">
+                    <a href="">
+                        <img src="https://www.ues.edu.sv/themes/UES-THEME/assets/images/ues_logo3.svg" alt="logo">
+                    </a>
+                </div>
+                <div>2021 Universidad de El Salvador. </br> 
+                    Ciudad Universitaria "Dr. Fabio Castillo Figueroa",</br>Final de Av.Mártires y Héroes del 30 julio, San Salvador, </br> El Salvador, América Central. Teléfonos: +(503) 2511-2000. Todos los derechos reservados.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="https://www.ues.edu.sv/blog/post/croquis-sede-central-">Mapa del Sitio</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+      </footer>
         <script>
             function enviar() {
                 var corr = document.getElementById("email");
@@ -122,9 +150,7 @@
                 });
             });
         </script>
-        {% block buttons %}
-                        
-        {% endblock %}
+        
         <a href="#inicio"><img src="{% static 'img/subir.png' %}" alt="Subir" class="btnSubir" id="btnSubir"></a>
     </body>
 </html>
