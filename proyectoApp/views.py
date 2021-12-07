@@ -46,6 +46,15 @@ def aspsql(request):
 def POO(request):
 	return render(request, "POO.html")
 
+def cadena-de-caracteres(request):
+	return render(request, "cadena-de-caracteres.html")
+
+def operaciones-con-cadenas(request):
+	return render(request, "operaciones-con-cadenas.html")
+
+def representacion-de-cadenas(request):
+	return render(request, "representacion-de-cadenas.html")
+
 def enviarCorreo(request):
 	subject=request.GET.get("asunto")
 	messa=request.GET.get("mensaje")
