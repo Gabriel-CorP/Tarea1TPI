@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'proyectoTPI',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'oliva',
         'HOST': 'localhost',
         'DATABASE_PORT': '5432',
     }
