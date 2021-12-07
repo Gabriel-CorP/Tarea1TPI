@@ -43,7 +43,7 @@ def vistas(request):
 def aspsql(request):
 	return render(request, "asp_sqlconection.html")
 
-def poo(request):
+def POO(request):
 	return render(request, "POO.html")
 
 def enviarCorreo(request):
