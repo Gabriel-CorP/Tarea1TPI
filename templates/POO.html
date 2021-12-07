@@ -5,7 +5,7 @@
 <br>
 	<h1 class="animate__animated animate__heartBeat" id="titulopoo"><b>Programacion orientada a objetos</b></h1>
 <div class="animate__animated animate__backInRight"  align="center">
-		<img src="../static/img/vb.jpg">
+		<img src="../static/img/vb.jpg" class="img-fluid">
 	</div>
 	<p class="animate__animated animate__backInRight" id="introduccionpoo">La POO es una evolucion de la programacion por procedimientos llamada tambien estructurada. Se basaba en funciones y procedimientos y el codigo que controlaba el flujo de las llamadas a estos
 	<br><br>
@@ -23,7 +23,7 @@
        <b>**Nota: Algunos autores añaden un cuarto requisito: la abstraccion, pero este último está estrechamente ligado con la encapsulacion.**</b>
 	  <h1 class="animate__animated animate__heartBeat" id="clases"><b>Clases</b></h1>
 <div class="animate__animated animate__backInRight"  align="center">
-		<img src="../static/img/clase.png">
+		<img src="../static/img/clase.png" class="img-fluid">
 	</div>
 	<p class="animate__animated animate__backInRight" id="clasesinfo"> Una Clase es una estructura de un objeto, un diseño que describe las propiedades (datos) y métodos (acciones) de un objeto
             <br><br>Una clase es la que tiene el poder de ejecucion en los lenguajes de .NET, la mayoría del codigo que escribiremos en nuestros programas sera escrito en una clase y la mayoría de la funcionalidad del .NET Framework será utilizada a partir de una clase. De ahi que el concepto de clase es un concepto fundamental para el desarrollo de aplicaciones con .NET.
@@ -70,13 +70,13 @@ En realidad la herencia es la misma, esta es una diferenciación puramente conce
       <br><br>Cada objeto es responsable de inicializarse y destruirse en forma correcta
       </p>
 <div class="animate__animated animate__backInRight"  align="center">
-		<img src="../static/img/inobjetos.png">
+		<img src="../static/img/inobjetos.png" class="img-fluid">
 	</div>
 <h2 class="animate__animated animate__heartBeat" id="instanciacionobj"><b>Instanciacion de objetos</b></h2>
 <br>Permiten asignar valores a cualquier campo o propiedad accesible de un objeto en el momento de su creación sin tener que invocar un constructor seguido de líneas de instrucciones de asignación
         <p class="animate__animated animate__backInRight" id="insmetodosinfo"> </p>
 <div class="animate__animated animate__backInRight"  align="center">
-		<img src="../static/img/objetos.png">
+		<img src="../static/img/objetos.png" class="img-fluid">
 	</div>
         
             <h2 class="animate__animated animate__heartBeat" id="metodos"><b>Metodos</b></h2>
@@ -114,12 +114,25 @@ En realidad la herencia es la misma, esta es una diferenciación puramente conce
         
         <h2 id="videos"><b>Videos Recomendados:</b></h2>
 	<center>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/vH32wXPTeKk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nlp37odNato?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-DS8_-JcvHs?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vH32wXPTeKk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nlp37odNato?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-DS8_-JcvHs?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
         <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 {% load sweetify %}
 {% sweetify %}
 
+{% endblock %}
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/index/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channelid="UCMOktU8VdCTRJnGBL204UJw" data-layout="default" data-count="hidden" target="_blank"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="_blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
 {% endblock %}
