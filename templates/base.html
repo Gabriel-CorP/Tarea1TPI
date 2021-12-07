@@ -11,15 +11,19 @@
         <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
         <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <!-- <script src="{% static 'js/sweetalert2@11.js' %}"></script> -->
+        <script src="{% static 'js/sweetalert.min.js' %}"></script>
         <script src="{% static 'js/menuscroll-tooltip2.js' %}"></script>
-        <script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
+        <script src="{% static 'js/queryloader2.min.js' %}"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+        {% block url %}
+                        
+        {% endblock %}
     </head>
     <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="5fHI9gtQ"></script>
-        <a href="#" id="inicio" style="visibility: hidden;"></a>
-        <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top wow animate__animated animate__slideInDown" role="navigation">
+        <div id="banner" align="center"> <img src="https://image.flaticon.com/icons/png/512/919/919844.png" class="img-fluid" width="60" height="60" style="display:inline;"> <h1>Bienvenidos a programación en VB.NET</h1> </div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="5fHI9gtQ"></script>       
+        <nav id="menu" class="navbar navbar-expand-lg navbar-dark  wow animate__animated animate__slideInDown" role="navigation">
             <div class="container-fluid">
                 <ul class="navbar-nav mr-auto">
                     <a class="navbar-brand" href="/index"><i class="fas fa-home"></i> Inicio</a>
@@ -30,9 +34,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                    <a class="navbar-brand" href="/estructura_datos"><i class="fas fa-laptop-code"></i> Estructuras de datos<span class="sr-only">(current)</span></a>
-                    <a class="navbar-brand" href="/#"><i class="fas fa-spell-check"></i> Cadenas de caracteres<span class="sr-only">(current)</span></a>
-                    <a class="navbar-brand" href="/#"><i class="fas fa-laptop-code"></i> POO<span class="sr-only">(current)</span></a>
+					<a class="navbar-brand" href="/estructura_datos"><i class="fas fa-laptop-code"></i> Estructuras de datos<span class="sr-only">(current)</span></a>
+                    <a class="navbar-brand" href="/cadena-de-caracteres"><i class="fas fa-spell-check"></i> Cadenas de caracteres<span class="sr-only">(current)</span></a>
+                    <a class="navbar-brand" href="/POO"><i class="fas fa-laptop-code"></i> POO<span class="sr-only">(current)</span></a>
                     <a class="navbar-brand" href="/consola"><i class="fas fa-laptop-code"></i> PCLI<span class="sr-only">(current)</span></a>
                     <a class="navbar-brand" href="/programacion_web"><i class="fab fa-internet-explorer"></i> Programacion Web<span class="sr-only">(current)</span></a>
                     </li>
@@ -40,26 +44,77 @@
                 </div>
             </div>
         </nav>
+        <div id="fb-root"></div>
+        <a href="#" id="inicio" style="visibility: hidden;"></a>
         <div id="contenido">
         {% block content %}
                         
         {% endblock %}
         </div>
-
+<!-- 
         <div class="correo">
 
             <center>
                 <h3> Dudas o comentarios</h3>
                 <p>Le responderemos lo mas pronto posible</p>
             <table>
-                <tr> <td><p>Correo:</p></td> <td><input type="text" id="email"></input> </td> <td><p> Asunto: </input> </p></td> <td><input type="text" id="asunto"></td> </tr>
+                <tr> <td><p>Correo:</p></td> <td><input type="text" id="email" required></input> </td> <td><p> Asunto: </input> </p></td> <td><input type="text" id="asunto" required></td> </tr>
             
-            <tr> <td> <p>Mensaje: </p> </td> <td colspan="3"><textarea id="mensaje" rows="2" cols="55"></textarea> </td> </tr>
+            <tr> <td> <p>Mensaje: </p> </td> <td colspan="3"><textarea id="mensaje" rows="2" cols="55" required></textarea> </td> </tr>
             
             <table>
-            <input type="button"  class="btn btn-primary" value="enviar" onClick="enviar()" ></input>
+            <button class="btn btn-primary" onClick="enviar()"><i class="fas fa-envelope"></i> Enviar</button>
             </center>
+        </div> -->
+        <center>
+            <h3> Dudas o comentarios</h3>
+            <p>Le responderemos lo mas pronto posible</p>
+        </center>
+        <div class="row justify-content-center">
+          <div class="col-md-6">  
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              </div>
+             <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" class="form-control" id="asunto" placeholder="Asunto" required>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary" onClick="enviar()"><i class="fas fa-envelope"></i> Enviar</button>
+          </div>
         </div>
+        
+        {% block buttons %}
+                        
+        {% endblock %}
+        <br>
+        <footer id="footer" class="midnight-blue">
+            <br>
+            <div class="container">
+            <div class="col-sm-9">
+                <div style="float:left; padding:0 30px 0 0" class="navbar-brand2">
+                    <a href="">
+                        <img src="https://www.ues.edu.sv/themes/UES-THEME/assets/images/ues_logo3.svg" alt="logo">
+                    </a>
+                </div>
+                <div>2021 Universidad de El Salvador. </br> 
+                    Ciudad Universitaria "Dr. Fabio Castillo Figueroa",</br>Final de Av.Mártires y Héroes del 30 julio, San Salvador, </br> El Salvador, América Central. Teléfonos: +(503) 2511-2000. Todos los derechos reservados.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="https://www.ues.edu.sv/blog/post/croquis-sede-central-">Mapa del Sitio</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+      </footer>
         <script>
             function enviar() {
                 var corr = document.getElementById("email");
@@ -75,17 +130,29 @@
                     corr.value="";
                     asu.value="";
                     men.value="";
-                    alert("Correo electronico enviado");
+                    // alert("Correo electronico enviado");
+                    swal("Hecho!", "Correo mandado con exito", "success");
                     
                   }
                 });
               }
               else {
-                alert("Debe completar todos los campos del formulario de envio de correo");
+                //alert("Debe completar todos los campos del formulario de envio de correo");
+                swal("Fallo!", "Ocurrio un error, debe llenar todos los campos requeridos para enviar el correo", "error");
             }
             }
-        
+            window.addEventListener('DOMContentLoaded', function() {
+                QueryLoader2(document.querySelector("body"), {
+                    barColor: "#69d2f1",
+                    backgroundColor: "#333",
+                    percentage: true,
+                    barHeight: 4,
+                    minimumTime: 600,
+                    fadeOutTime: 1000
+                });
+            });
         </script>
+        
         <a href="#inicio"><img src="{% static 'img/subir.png' %}" alt="Subir" class="btnSubir" id="btnSubir"></a>
     </body>
 </html>

@@ -53,3 +53,23 @@
     font-weight: bold;
     
 }
+
+#fbbutton, #ytbutton, #meetbutton {
+    padding: 2%;
+}
+#banner{
+    background-color: black;
+    color: white;
+    padding-bottom: 1%;
+    border-bottom: black;
+    border-width: 3em;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding-bottom: 1%;
+}
+
+
+
+

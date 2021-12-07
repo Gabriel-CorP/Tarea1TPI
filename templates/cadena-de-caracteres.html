@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block url %}
+<link href="{% static 'css/css-cadenas.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<br>
+    <br>
+    <div class="contenedor">
+        <div class="contenedor2">
+            <h2 class="titulo">Cadena de caracteres en VB.Net</h2><br>
+            <div class="texto1">
+                <p>Son secuencias ordenadas de elementos que pueden tener longitud arbitraria, pero finita y estos elementos pueden pertenecer: a un lenguaje formal o alfabeto. Podemos decir que una cadena de caracteres es una sucesión de caracteres: (letras, números, espacio, signos o símbolos).<br>
+                En programación, si no se utilizan restricciones de acuerdo al alfabeto, una cadena podrá estar formada por cualquier combinación finita de todo el juego de caracteres disponibles (las letras de la 'a' a la 'z' y de la 'A' a la 'Z', los números del '0' al '9', el espacio en blanco ' ', símbolos diversos '!', '@', '%', etc). <br><br>
+                Normalmente se utilizán como un tipo de dato predefinido, para palabras, frases o cualquier otra sucesión de caracteres. Estos pueden almacenarse en un vector de datos, o matriz de datos de una sola fila (array).
+                Un caso especial de cadena es la que contiene cero caracteres, a esta cadena se la llama cadena vacía.<br><br>
+                Hay ciertas funciones que proporciona Visual Basic en la clase Microsoft.VisualBasic.Strings para la búsqueda y manipulación de cadenas. Pueden considerarse funciones intrínsecas de Visual Basic; es decir, no tiene que llamarlos como miembros explícitos de una clase. En la clase System.String se encuentran disponibles métodos adicionales y en algunos casos, métodos complementarios.<br><br>
+                Representa texto como una secuencia de unidades de código UTF-16.
+                Se puede utilizar la instrucción Option Compare para establecer si las cadenas se comparan utilizando un orden de clasificación de texto que no distingue entre mayúsculas y minúsculas determinado por la configuración regional de su sistema (Texto) o por las representaciones binarias internas de los caracteres (Binario). El método de comparación de texto predeterminado es Binario.
+                </p>
+            </div>
+            <h3 class="titulo">Algunos ejemplos en el manejo de cadenas:</h3>
+            <div class="texto1">
+                <p><br>Ejemplo: se usa la función UCase para devolver una versión en mayúsculas de una cadena.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/UCase.png">
+            </div>
+            <div class="texto1">
+                <p><br>Ejemplo: se usa Len para devolver el número de caracteres en una cadena.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/Len.png">
+            </div>
+            <div class="texto1">
+                <p><br>Ejemplo: se utiliza la función LTrim para eliminar los espacios iniciales y la función RTrim para eliminar los espacios finales de una variable de cadena. Utiliza la función Recortar para eliminar ambos tipos de espacios.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/LTrim.png">
+            </div>
+            <h3 class="titulo">Mas sobre el manejo de cadenas en VB.NET:</h3>
+            <ul>
+                <li><a href="../operaciones-con-cadenas/">Operaciones con cadenas de caracteres</a></li>
+                <li><a href="../representacion-de-cadenas/">Representacion y funciones de cadenas de caracteres</a></li>
+            </ul>
+            <h5 id="videos"><b>Videos Recomendados:</b></h5>
+            <center>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/z8IQ9V7tN48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/H0mNL8e8ZT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+            </center>
+        </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/index/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channelid="UCMOktU8VdCTRJnGBL204UJw" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="_blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
+{% endblock %}

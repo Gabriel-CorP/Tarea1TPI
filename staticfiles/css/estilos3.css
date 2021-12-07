@@ -1,0 +1,55 @@
+/*Hoja de estilos*/
+.body{
+    /*background-color: #1f1f1f;*/
+}
+#tituloconsola,#ejemsalida, #ejementrada, #ejemestructuras, #videos {
+	text-align: center;
+}
+#introduccionconsola,#txtsalidas,#txtentradas,#texto{
+	text-align: justify;
+}
+
+.btnSubir {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    width: 40px;
+    transition: all 1s;
+}
+
+.navbar{
+   background-color: #000000;
+}
+
+.navbar-brand:hover{
+    background-color: #0da502;
+    border-radius: 8px;
+    transition: background-color 1.5s;
+}
+
+.midtabla {
+    border-bottom: 1px solid;
+    border-top: 1px solid
+}
+
+.toptabla {
+    border-bottom: 1px solid;
+}
+
+.listadet {
+    padding: 3%;
+}
+
+#tituloconsola,#titulo {
+    padding-bottom: 1%;
+}
+
+#contenido {
+    padding: 2%
+}
+.codigo{
+    background-color: rgb(150, 208, 235);
+    border-radius: 12px;
+    font-weight: bold;
+    
+}

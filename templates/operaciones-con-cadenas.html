@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block url %}
+<link href="{% static 'css/css-cadenas.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<br>
+    <br>
+    <a href="../cadena-de-caracteres/">&larr;Regresar</a>
+    <div class="contenedor">
+        <div class="contenedor2">
+            <h2 class="titulo">Operaciones con cadena de caracteres en VB.Net</h2><br>
+            <div class="texto1">
+                <ul>
+                    <li><a href="#operacion-asignacion">Asignación.</a></li>
+                    <li><a href="#operacion-concatenacion">Concatenación.</a></li>
+                    <li><a href="#operacion-busqueda">Búsqueda.</a></li>
+                    <li><a href="#operacion-comparacion">Comparación.</a></li>
+                </ul>
+            </div>
+            <h3 class="titulo">Operación: Asignación de una cadena a otra.</h3>
+            <div class="texto1" id="#operacion-asignacion">
+                <p><br>A una instancia de una cadena se le puede asignar un valor literal que represente una serie de caracteres. Cualquier literal que se asigna a una variable String debe ir entre comillas ("").<br>
+                Por ejemplo:</p>
+                <p class="con-borde">Dim MyString As String<br>
+                MyString = "This is an example of the String data type"</p>  
+                <p><br>Una variable (String) acepta también expresiones que se evaluen como una cadena. A continuación se muestran un ejemplo:</p>
+                <p class="con-borde">Dim OneString As String<br>
+                Dim TwoString As String<br>
+                OneString = "one, two, three, four, five"<br>
+                ' Evaluates to "two".<br>
+                TwoString = OneString.Substring(5, 3)<br>
+                OneString = "1"<br>
+                ' Evaluates to "11".<br>
+                TwoString = OneString & "1"</p>  
+            </div>
+            <h3 class="titulo">Operación: Concatenación,unir dos cadenas o más (o una cadena con un carácter) para formar una cadena de mayor tamaño.</h3>
+            <div class="texto1" id="operacion-concatenacion">
+                <p><br>El método String.Concat se puede usar para crear fácilmente un objeto de cadena a partir de dos o más objetos existentes. Proporciona una manera independiente del lenguaje de concatenar cadenas. Este método acepta cualquier clase que derive de System.Object. A continuación se crea una cadena a partir de dos objetos de cadena existentes y un carácter de separación:<br></p>
+                <p class="con-borde">string helloString1 = "Hello";<br>
+                string helloString2 = "World!";<br>
+                Console.WriteLine(String.Concat(helloString1, ' ', helloString2));
+            </div>
+            <h3 class="titulo" id="operacion-busqueda">Operación: Búsqueda, localizar dentro de una cadena una subcadena más pequeña o un carácter.</h3>
+            <div class="texto1">
+                <p><br>Existe un conjunto de métodos que permiten buscar caracteres dentro de cadenas de texto. Recordar que una cadena de caracteres no es más que eso: una suma de caracteres.<br><br>
+                <b>Búsqueda de subcadenas:</b><br><br>
+                <b>int indexOf(String str): </b>Busca una cadena dentro de la cadena origen. Devuelve un entero con el índice a partir del cual está la cadena localizada. Si no encuentra la cadena devuelve un -1.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public int indexOf(int ch)<br>
+                public int indexOf(int ch, int fromIndex)<br>
+                public int indexOf(String str)<br>
+                public int indexOf(String str, int fromIndex)</p>  
+                <b>int indexOf(String str, int fromIndex):</b> Misma funcionalidad que indexOf(String str), pero a partir de un índice indicado como argumento del método.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public int indexOf(int ch)<br>
+                public int indexOf(int ch, int fromIndex)<br>
+                public int indexOf(String str)<br>
+                public int indexOf(String str, int fromIndex)</p>  
+                <b>int lastIndexOf(String str):</b> Si la cadena que se busca se repite varias veces en la cadena origen se puede utilizar este método que indica el índice donde empieza la última repetición de la cadena buscada.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public int lastIndexOf(int ch)<br>
+                public int lastIndexOf(int ch, int fromIndex)<br>
+                public int lastIndexOf(String str)<br>
+                public int lastIndexOf(String str, int fromIndex)</p>  
+                <b>lastIndexOf(String str, int fromIndex):</b> Lo mismo que el anterior, pero a partir de un índice pasado como argumento.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public int lastIndexOf(int ch)<br>
+                public int lastIndexOf(int ch, int fromIndex)<br>
+                public int lastIndexOf(String str)<br>
+                public int lastIndexOf(String str, int fromIndex)</p>  
+                <b>boolean startsWith(String prefix):</b> Para saber si una cadena de texto empieza con un texto específico. Este método puede obviarse y utilizarse el indexOf(), en el caso de que devuelva un 0, se afirma que es el inicio de la cadena.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public boolean startsWith(String prefix)<br>
+                public boolean startsWith(String prefix, int toffset)<br> </p>
+                <b>boolean startsWith(String prefix, int toffset):</b> Mejor que el anterior.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public boolean startsWith(String prefix)<br>
+                public boolean startsWith(String prefix, int toffset)<br> </p>
+                <b>boolean endsWith(String suffix):</b> Para saber si una cadena empieza por un determinado texto.<br>
+                <p class="con-borde"><b>Sintaxis:</b><br>
+                public boolean endsWith(String suffix)<br></p>
+                <br> 
+            </div>
+            <h3 class="titulo" id="operacion-comparacion" >Operación: Comparación, comparar dos cadenas.</h3>
+            <div class="texto1">
+                <p><br>Hay varias frmas de comparar 2 String (dos cadenas de texto(String)) en VB.NET, a continuación se muestra una forma muy sencilla:<br></p>
+                <p class="con-borde">
+                If string1 = string2 Then<br>
+                    'Las cadenas son iguales'<br>
+                Else<br>
+                    'Las cadenas son diferentes'<br>
+                End If<br></p>  
+                <p><br>Otras formas de comparación son las siguientes:</p>
+                <b>String.Compare: </b>Compara los valores de dos cadenas. Devuelve un valor entero.<br>
+                <b>String.CompareTo: </b>Compara el objeto de cadena actual con otra cadena. Devuelve un valor entero.<br><br>
+            <h5><b>Videos Recomendados:</b></h5>
+        	<center>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/H0mNL8e8ZT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/H0mNL8e8ZT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+            </center>
+        </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/cadena-de-caracteres/operaciones-con-cadenas" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channelid="UCMOktU8VdCTRJnGBL204UJw" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="_blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
+{% endblock %}

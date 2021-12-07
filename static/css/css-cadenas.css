@@ -1,0 +1,27 @@
+
+.titulo{
+    text-align: center;
+    font-weight: bold;  
+}
+.texto1{
+    text-align: justify;
+}
+.imagen{
+	text-align: center;
+}
+.contenedor{
+	margin: auto;
+	width: 80%;
+	border: 2px solid gray;
+}
+.contenedor2{
+	width: 90%;
+	margin: auto;
+}
+.video{
+	width: 560px;
+	height: 315px;
+}
+.con-borde{
+	border: 3px solid cornflowerblue;
+}

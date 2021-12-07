@@ -94,11 +94,18 @@ También permite la asignación de memoria dinámica, agregar, buscar y ordenar 
 
 <h5 id="videos"><b>Videos Recomendados:</b></h5>
 	<center>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/4HLnGaNpq64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/cWshF4JvSyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="row">
+    		<div class="col-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/4HLnGaNpq64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" width="60" height="60" src="https://www.youtube.com/embed/cWshF4JvSyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
 	</center>
-
 
 
 <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js"  type="text/javascript">
@@ -106,4 +113,17 @@ También permite la asignación de memoria dinámica, agregar, buscar y ordenar 
 {% load sweetify %}
 {% sweetify %}
 
+{% endblock %}
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/estructura_datos/arraylist" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
 {% endblock %}

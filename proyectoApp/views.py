@@ -39,8 +39,23 @@ def baseDeDatos(request):
 def vistas(request):
 	return render(request, "vistas.html")
 
+def apis(request):
+	return render(request, "apis.html")    
+
 def aspsql(request):
 	return render(request, "asp_sqlconection.html")
+
+def POO(request):
+	return render(request, "POO.html")
+
+def cadenaDeCaracteres(request):
+	return render(request, "cadena-de-caracteres.html")
+
+def operacioneesConCadenas(request):
+	return render(request, "operaciones-con-cadenas.html")
+
+def representacionDeCadenas(request):
+	return render(request, "representacion-de-cadenas.html")
 
 def enviarCorreo(request):
 	subject=request.GET.get("asunto")
