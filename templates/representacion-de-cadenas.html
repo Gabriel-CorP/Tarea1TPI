@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block url %}
+<link href="{% static 'css/css-cadenas.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<br>
+    <br>
+    <a href="../cadena-de-caracteres/">&larr;Regresar</a>
+    <div class="contenedor">
+        <div class="contenedor2">
+            <h2 class="titulo">Representación de cadenas de caracteres en VB.Net</h2><br>
+            <div class="texto1">
+                <ul>
+                    <li><a href="#introduccion">Introdución a las cadenas de caracteres en VB.Net.</a></li>
+                    <li><a href="#manejo">Manejo de caracteres.</a></li>
+                    <li><a href="#tipos">Tipos de cadenas de caracteres en VB.Net.</a></li>
+                    <li><a href="#funciones">Funciones de Cadenas de Caracteres.</a></li>
+                </ul>
+            </div>
+            <h3 class="titulo">Introdución a las cadenas de caracteres en VB.Net</h3><br>
+            <div class="texto1" id="introduccion">
+                <p>Una cadena suele ser representada entre comillas dobles superiores ("palabra"), mientras que un carácter de esa cadena (un char) suele ser representado entre comillas simples ('p'). Por ejemplo:<br></p>
+                <p class="con-borde">char c = 'a'; <br><br>
+                char str[5] = "hola"; <br><br>
+                string palabra = 'hola Maria'; <br></p>  
+                Generalmente para acceder a un carácter en una posición determinada se suele usar la forma variable posición como cuando se accede a un vector.<br><br>
+                <b>.length():</b> Nos devuelve el tamaño que tiene la cadena.
+                El primer carácter de la cadena será el del índice 0. Junto con el método .length() podemos recuperar todos los caracteres de la cadena de texto. Si intentamos acceder a un índice de carácter que no existe el resultado que devolverá una excepción <b>IndexOutOfBoundsException</b>.
+                </p>
+            </div>
+            <h3 class="titulo" id="manejo">Manejo de caracteres:</h3>
+            <div class="texto1">
+                <p><br>Los métodos que nos permite manejar los caracteres de una cadena de texto, son una gran variedad. Se muestra algunos de ellos: Para ponerles en mayúsculas, minúsculas, quitarles los espacios en blanco, reemplazar caracteres.</p> 
+            </div>
+            <b>String toLowerCase(): </b>Convierte todos los caracteres de una cadena en minúsculas.<br>
+            <b>String toUpperCase(): </b>Convierte todos los caracteres de una cadena en mayúsculas.<br>
+            <b>String trim(): </b>Elimina todos los espacios en blanco de una cadena.<br>
+            <b>String replace(char oldChar, char newChar): </b>Este método lo utilizaremos cuando lo que queramos hacer sea el remplazar un carácter por otro. Se reemplazarán todos los caracteres encontrados.<br><br>
+
+            <h3 class="titulo" id="tipos">Tipos de cadenas de caracteres en VB.Net:</h3>
+            <div class="texto1">
+                <p>Las cadenas pueden ser segun la naturaleza: naturaleza dinámica o de naturaleza estática. En este segundo caso, el programador debe tener en cuenta que al recorrer la cadena los índices no se vayan de los límites previstos.</p>
+                <ul>
+                    <li>De naturaleza dinámica: pueden alterar su longitud durante el tiempo de ejecución.</li>
+                    <li>De naturaleza estática: su longitud es fija a lo largo del tiempo de ejecución.</li>
+                </ul>
+                <p>El final de la cadena se delimita de diferente manera en uno u otro caso:</p>
+                <ul>
+                    <li>Mediante un carácter de fin de cadena ('\0' en C) para las cadenas de tipo dinámico.</li>
+                    <li>Mediante una propiedad de la cadena que delimite su longitud (length) para las de tipo estático.</li>
+                </ul>
+            </div>
+
+            <h3 class="titulo" id="funciones">Funciones de Cadenas de Caracteres:</h3>
+            <div class="texto1">
+                <p><br>Se describen diferentes formas de analizar y manipular cadenas. Algunos métodos son parte del lenguaje Visual Basic. Los métodos de Visual Basic .NET se utilizan como funciones inherentes al lenguaje.<br>
+                Se muestra el uso habitual de un comando de manipulación de cadenas de Visual Basic .NET:</p> 
+                <p class="con-borde">Dim aString As String = "SomeString" <br>
+                Dim bString As String <br>
+                bString = Mid(aString, 3, 3); <br></p> 
+                <p>En el ejemplo anterior, la función Mid realiza una operación directa en aString y asigna el valor a bString.<br><br>
+                Existen dos tipos de métodos en String: métodos compartidos y métodos de instancia. Que se muestran a continuación: <br><br>
+                <b>Método compartido: </b>Es un método que se deriva de la propia clase String y no necesita una instancia de dicha clase para funcionar. Estos métodos se pueden calificar con el nombre de la clase (String) en vez de con una instancia de dicha clase.<br>
+                El método String.Copy es un método estático, que actúa sobre una expresión dada y asigna el valor resultante a bString.</p>
+                <p class="con-borde">Dim aString As String <br>
+                bString = String.Copy("A literal string") <br></p> 
+                <p><b>Método de instancia: </b>Se derivan de una instancia concreta de String y deben calificarse con el nombre de la instancia.<br>
+                El método String.Copy es un método estático, que actúa sobre una expresión dada y asigna el valor resultante a bString.
+                En este el método SubString es un método de la instancia de String es decir aString, realiza una operación en aString y asigna ese valor a bString.</p>
+                <p class="con-borde">Dim aString As String = "A String" <br>
+                Dim bString As String <br>
+                bString = aString.SubString(2,6)'bString = "String"<br></p> 
+            </div>
+            <div class="texto1">
+                <p><br>La función UCase, se usa para devolver una versión en mayúsculas de una cadena.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/UCase.png">
+            </div>
+            <div class="texto1">
+                <p><br>Ejemplo: se usa Len para devolver el número de caracteres en una cadena.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/Len.png">
+            </div>
+            <div class="texto1">
+                <p><br>Ejemplo: se utiliza la función LTrim para eliminar los espacios iniciales y la función RTrim para eliminar los espacios finales de una variable de cadena. Utiliza la función Recortar para eliminar ambos tipos de espacios.</p> 
+            </div>
+            <div class="imagen">
+                <img class="img-fluid" src="../static/img/LTrim.png">
+            </div>
+            <h5 id="videos"><b>Videos Recomendados:</b></h5>
+            <center>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mb-r_A1PKQk" title="video player"></iframe>
+
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GBxLgXqN7UI" title="video player"></iframe>
+            </center>
+        </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+	<div class="d-flex justify-content-center align-items-center">
+		<div id="fbbutton" class="fb-share-button" data-href="http://127.0.0.1:8000/cadena-de-caracteres/representacion-de-cadenas/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Findex%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+
+		<div id="ytbutton" class="g-ytsubscribe" data-channelid="UCMOktU8VdCTRJnGBL204UJw" data-layout="default" data-count="hidden"></div>
+
+		<div id="meetbutton">
+			<a href="https://meet.google.com/rvr-kjwu-fyk" target="_blank">
+				<span class="iconify" data-icon="logos:google-meet" data-width="28" data-height="28"></span>
+			</a>
+		</div>
+	</div>
+{% endblock %}

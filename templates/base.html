@@ -16,6 +16,9 @@
         <script src="{% static 'js/queryloader2.min.js' %}"></script>
         <script src="https://apis.google.com/js/platform.js"></script>
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+        {% block url %}
+                        
+        {% endblock %}
     </head>
     <body>
         <div id="banner" align="center"> <img src="https://image.flaticon.com/icons/png/512/919/919844.png" class="img-fluid" width="60" height="60" style="display:inline;"> <h1>Bienvenidos a programación en VB.NET</h1> </div>
@@ -32,7 +35,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item active">
 					<a class="navbar-brand" href="/estructura_datos"><i class="fas fa-laptop-code"></i> Estructuras de datos<span class="sr-only">(current)</span></a>
-                    <a class="navbar-brand" href="/#"><i class="fas fa-spell-check"></i> Cadenas de caracteres<span class="sr-only">(current)</span></a>
+                    <a class="navbar-brand" href="/cadena-de-caracteres"><i class="fas fa-spell-check"></i> Cadenas de caracteres<span class="sr-only">(current)</span></a>
                     <a class="navbar-brand" href="/POO"><i class="fas fa-laptop-code"></i> POO<span class="sr-only">(current)</span></a>
                     <a class="navbar-brand" href="/consola"><i class="fas fa-laptop-code"></i> PCLI<span class="sr-only">(current)</span></a>
                     <a class="navbar-brand" href="/programacion_web"><i class="fab fa-internet-explorer"></i> Programacion Web<span class="sr-only">(current)</span></a>
